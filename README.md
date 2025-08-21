@@ -19,45 +19,45 @@ A lightweight command-line task management application.
 Run commands with:
 
 ```bash
-python <command> <arguments>
+python app/main.py <command> <arguments>
 ```
 
 ### Commands
 
 **Add a new task**
 ```bash
-python add "<description>"
+python app/main.py add "<description>"
 ```
 
 **Delete a task**
 ```bash
-python delete <task_id>
+python app/main.py delete <task_id>
 ```
 
 **Update a task**
 ```bash
-python update <task_id> "<new description>"
+python app/main.py update <task_id> "<new description>"
 ```
 
 **List all tasks**
 ```bash
-python list
+python app/main.py list
 ```
 
 **List tasks by status**
 ```bash
-python list <status>
+python app/main.py list <status>
 # status can be: todo | in-progress | done
 ```
 
 **Mark a task as in-progress**
 ```bash
-python mark-in-progress <task_id>
+python app/main.py mark-in-progress <task_id>
 ```
 
 **Mark a task as done**
 ```bash
-python mark-done <task_id>
+python app/main.py mark-done <task_id>
 ```
 
 ---
