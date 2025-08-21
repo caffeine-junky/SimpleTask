@@ -1,27 +1,67 @@
 # Simple Task
 
-## Simple Task is a command line task management application
+A lightweight command-line task management application.
+
 ---
 
-### Features
-- Add Task
-- Delete Task
-- Update Task
-- List All Tasks
-- List Todo Tasks
-- List In-Progress Tasks
-- List Done Tasks
-- Change Task Status
+## ✨ Features
+- Add tasks  
+- Delete tasks  
+- Update tasks  
+- List all tasks  
+- Filter tasks by status (**todo**, **in-progress**, **done**)  
+- Change task status (mark as in-progress or done)  
+
 ---
 
-### How to use it
-python <option> <value>
+## 🚀 Usage
 
-- add "<description>"
-- delete <task_id>
-- update <task_id> "<description>"
-- list
-- list <status> | status being one of (todo, in-progress, done)
-- mark-in-progress <task_id>
-- mark-done <task-id>
+Run commands with:
 
+```bash
+python <command> <arguments>
+```
+
+### Commands
+
+**Add a new task**
+```bash
+python add "<description>"
+```
+
+**Delete a task**
+```bash
+python delete <task_id>
+```
+
+**Update a task**
+```bash
+python update <task_id> "<new description>"
+```
+
+**List all tasks**
+```bash
+python list
+```
+
+**List tasks by status**
+```bash
+python list <status>
+# status can be: todo | in-progress | done
+```
+
+**Mark a task as in-progress**
+```bash
+python mark-in-progress <task_id>
+```
+
+**Mark a task as done**
+```bash
+python mark-done <task_id>
+```
+
+---
+
+## 📌 Notes
+- `<task_id>` is the unique identifier assigned to each task.  
+- Valid statuses are: **todo**, **in-progress**, **done**.  
