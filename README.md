@@ -17,11 +17,11 @@
 ### How to use it
 python <option> <value>
 
-add "<description>"
-delete <task_id>
-update <task_id> "<description>"
-list
-list <status> | status being one of (todo, in-progress, done)
-mark-in-progress <task_id>
-mark-done <task-id>
+- add "<description>"
+- delete <task_id>
+- update <task_id> "<description>"
+- list
+- list <status> | status being one of (todo, in-progress, done)
+- mark-in-progress <task_id>
+- mark-done <task-id>
 
