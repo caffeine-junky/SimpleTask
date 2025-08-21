@@ -17,17 +17,19 @@ class TaskManager:
             with open(self._db_path, "r") as file:
                 data = json.load(file)
                 self._tasks = [Task(**task) for task in data]
-        
-        self._db_path.touch()
+        else:
+            self._db_path.touch()
 
-        with open(self._db_path, "w") as file:
-            json.dump([], file, indent=4)
+            with open(self._db_path, "w") as file:
+                json.dump([], file, indent=4)
     
     def add_task(self, description: str) -> None:
         """"""
         task: Task = Task(id=self._generate_id(), description=description)
         self._tasks.append(task)
         self._save_db()
+        
+        print(f"Task added successfully (ID: {task.id})")
     
     def remove_task(self, task_id: int) -> bool:
         """"""
@@ -67,7 +69,7 @@ class TaskManager:
     def _save_db(self) -> None:
         """"""
         with open(self._db_path, "w") as file:
-            data = [task.model_dump() for task in self._tasks]
+            data = [task.model_dump(mode="json") for task in self._tasks]
             json.dump(data, file, indent=4)
     
     def _generate_id(self) -> int:
