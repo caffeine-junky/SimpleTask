@@ -65,3 +65,7 @@ python app/main.py mark-done <task_id>
 ## 📌 Notes
 - `<task_id>` is the unique identifier assigned to each task.  
 - Valid statuses are: **todo**, **in-progress**, **done**.  
+
+
+## Project URL
+- https://github.com/caffeine-junky/SimpleTask
